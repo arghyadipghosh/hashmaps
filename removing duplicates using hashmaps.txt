@@ -1,0 +1,33 @@
+package snippet;
+import java.util.*;
+public class removeduplicates {
+	public static ArrayList<Integer> removeduplicates(int a[])
+	{
+		ArrayList<Integer> output=new ArrayList();
+		HashMap<Integer,Boolean> map=new HashMap();
+		for(int i=0;i<a.length;i++)
+		{
+			if(map.containsKey(a[i]))
+			{
+				continue;
+			}
+			output.add(a[i]);
+			map.put(a[i],true);
+		}
+		return output;
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[]= {5,1,2,3,4,5,2,1,2,3,1,2,3,10000000};
+	  ArrayList<Integer> output=removeduplicates(a);
+	  for(int i=0;i<output.size();i++)
+	  {
+		  System.out.println(output.get(i));
+	  }
+	  
+
+	}
+
+}
